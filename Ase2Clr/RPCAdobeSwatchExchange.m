@@ -66,7 +66,7 @@
             CGFloat red = [[aseFileHandle readDataOfLength:4] bigEndianFloat32];
             CGFloat green = [[aseFileHandle readDataOfLength:4] bigEndianFloat32];
             CGFloat blue = [[aseFileHandle readDataOfLength:4] bigEndianFloat32];
-            color = [NSColor colorWithRed:red green:green blue:blue alpha:1.0];
+            color = [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:1.0];
         } else if ([colorModel isEqualToString:@"CMYK"]) {
             CGFloat components[5];
             components[0] = [[aseFileHandle readDataOfLength:4] bigEndianFloat32];
